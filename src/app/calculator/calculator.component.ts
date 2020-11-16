@@ -24,21 +24,25 @@ export class CalculatorComponent implements OnInit {
   add() {
     this.result.setValue(this.inp1.value + this.inp2.value);
     this.symbol = '+';
+    this.count += 1;
   }
 
   minus() {
     this.result.setValue(this.inp1.value - this.inp2.value);
     this.symbol = '-';
+    this.count += 1;
   }
 
   divide() {
     this.result.setValue(this.inp1.value / this.inp2.value);
     this.symbol = '/';
+    this.count += 1;
   }
 
   multiply() {
     this.result.setValue(this.inp1.value * this.inp2.value);
     this.symbol = '*';
+    this.count += 1;
   }
 
   reset() {
@@ -46,7 +50,6 @@ export class CalculatorComponent implements OnInit {
     this.inp1.reset();
     this.inp2.reset();
     this.result.reset();
-    this.count = 0;
   }
 
 
